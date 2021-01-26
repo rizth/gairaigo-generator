@@ -1,0 +1,13 @@
+button {
+    height: 40px;
+    width: 100px;
+}
+
+body {
+    text-align: center;
+}
+
+#output {
+    height: 300px;
+    width: 70%;
+}
