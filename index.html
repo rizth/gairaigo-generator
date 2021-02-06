@@ -5,13 +5,31 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Bullshit Gairaigo Generator</h1>
-    <textarea id='output'></textarea>
-    <div>
-        <input type="range" id='optlen' min='4' max='30' value='8'/>
-        <input id='optamount' value="10"/>    
+    <div id='app'>
+        <h1>{{info.title[lang]}}</h1>
+        <textarea id='output' v-model='text' readonly></textarea>
+        <div>
+            {{info.length[lang]}}: 
+            <input type="range" v-model='len' id='optlen' min='4' max='30' value='8'>
+            <input v-model='len' placeholder='length'>
+        </div>
+        <div>
+            {{info.amount[lang]}}: 
+            <input type="range" v-model='amount' id='optlen' min='10' max='100' value='20'>
+            <input v-model='amount' placeholder='amount'>
+        </div>
+        <div>
+            <button id='gen' v-on:click='generate'>{{info.generate[lang]}}</button>
+        </div>
+        <div>
+            <select v-model='lang'>
+                <option v-for='item in langList' v-bind:value='item.value'>{{item.name}}</option>
+            </select>
+        </div>
     </div>
-    <button id='gen'>生成</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
     <script src='script.js'></script>
+
 </body>
 </html>
