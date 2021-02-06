@@ -9,12 +9,12 @@
         <h1>{{info.title[lang]}}</h1>
         <textarea id='output' v-model='text' readonly></textarea>
         <div>
-            {{info.length[lang]}}: 
+            {{info.length[lang]}}
             <input type="range" v-model='len' id='optlen' min='4' max='30' value='8'>
             <input v-model='len' placeholder='length'>
         </div>
         <div>
-            {{info.amount[lang]}}: 
+            {{info.amount[lang]}}
             <input type="range" v-model='amount' id='optlen' min='10' max='100' value='20'>
             <input v-model='amount' placeholder='amount'>
         </div>
