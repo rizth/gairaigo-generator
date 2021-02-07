@@ -5,12 +5,12 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div id='app'>
+    <div id='app' v-cloak>
         <h1>{{info.title[lang]}}</h1>
         <textarea id='output' v-model='text' readonly></textarea>
         <div>
             {{info.length[lang]}}
-            <input type="range" v-model='len' id='optlen' min='4' max='30' value='8'>
+            <input type="range" v-model='len'>
             <input v-model='len' placeholder='length'>
         </div>
         <div>

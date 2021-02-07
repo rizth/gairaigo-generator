@@ -4,7 +4,7 @@ let katasExtend = ["キャ","キュ","キョ","シャ","シュ","ショ","チャ
 const app = new Vue({
     el: '#app',
     data: {
-        amount: 10,
+        amount: 20,
         len: 8,
         text: '',
         lang: 'en',
