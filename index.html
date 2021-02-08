@@ -6,7 +6,12 @@
 </head>
 <body>
     <div id='app' v-cloak>
-        <h1>{{info.title[lang]}}</h1>
+        <h1>
+            {{info.title[lang]}}
+            <select v-model='lang'>
+                <option v-for='item in langList' v-bind:value='item.value'>{{item.name}}</option>
+            </select>
+        </h1>
         <textarea id='output' v-model='text' readonly></textarea>
         <div>
             {{info.length[lang]}}
@@ -20,11 +25,6 @@
         </div>
         <div>
             <button id='gen' v-on:click='generate'>{{info.generate[lang]}}</button>
-        </div>
-        <div>
-            <select v-model='lang'>
-                <option v-for='item in langList' v-bind:value='item.value'>{{item.name}}</option>
-            </select>
         </div>
     </div>
 

@@ -8,10 +8,18 @@ button {
 }
 
 body {
+    font-family: sans-serif;
     text-align: center;
+    background-color: #eeeeee;
+}
+
+#app > * {
+    margin-bottom: 1ch;
 }
 
 #output {
     height: 300px;
     width: 70%;
+    border-width: 2;
 }
+
